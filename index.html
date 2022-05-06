@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Checkbox Svg Animation</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="container">
+        <input type="checkbox" name="chkbox" id="chkbox" class="chkbox">
+        <label for="chkbox" id="lab_check">
+            <svg viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+       <path class="box" d="M79.723,86.723H20.277c-3.866,0-7-3.134-7-7
+           V20.277c0-3.866,3.134-7,7-7h59.445c3.866,0,7,3.134,7,7v59.445C86.723,83.589,83.589,86.723,79.723,86.723z"/>
+       <polyline class="chk" points="26.522,51 41.376,65.854 75.543,31.687 "/>
+       </svg>
+            <span>Are You Accept</span>
+        </label>
+    </div>
+</body>
+</html>
+<script>
+let checkbox = document.getElementById('chkbox');
+let svg = document.getElementById('lab_check');
+
+svg.addEventListener('click',() => {
+    if(checkbox.checked)
+    svg.classList.add('reverse')
+    else
+    svg.classList.remove('reverse')
+
+})
+</script>

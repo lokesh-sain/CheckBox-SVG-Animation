@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  background: #F2F2F2;
+  font-family: 'Montserrat', sans-serif;
+  color: #0076ff;
+  font-weight: bold;
+}
+
+.container {
+  padding: .5em;
+  border-radius: .3em;
+  width: 200px;
+  border: 2px solid #ebebeb;
+  -webkit-box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.04), -7px -7px 5px rgba(255, 255, 255, 0.08);
+          box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.04), -7px -7px 5px rgba(255, 255, 255, 0.08);
+}
+
+.chkbox {
+  display: none;
+  pointer-events: none;
+}
+
+.chkbox + label {
+  cursor: pointer;
+  font-size: .8em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 3fr;
+      grid-template-columns: auto 3fr;
+}
+
+.chkbox + label svg {
+  width: 2em;
+  stroke: #007ce2;
+  stroke-width: 7;
+  fill: white;
+}
+
+.chkbox + label svg .box {
+  stroke-dasharray: 320;
+  stroke-dashoffset: 0;
+  fill: white;
+}
+
+.chkbox + label svg .chk {
+  stroke-dasharray: 70;
+  stroke-dashoffset: 70;
+  fill: none;
+}
+
+.chkbox + label span {
+  padding-top: .4em;
+  margin-left: .3em;
+}
+
+.chkbox:checked + label .box {
+  stroke-dashoffset: 320;
+  -webkit-transition: stroke-dashoffset .3s linear;
+  transition: stroke-dashoffset .3s linear;
+}
+
+.chkbox:checked + label .chk {
+  stroke-dashoffset: 0;
+  -webkit-transition: stroke-dashoffset .3s linear;
+  transition: stroke-dashoffset .3s linear;
+}
+
+.reverse .box {
+  stroke-dashoffset: 0;
+  -webkit-transition: stroke-dashoffset .3s linear;
+  transition: stroke-dashoffset .3s linear;
+}
+
+.reverse .chk {
+  stroke-dashoffset: 70;
+  -webkit-transition: stroke-dashoffset .3s linear;
+  transition: stroke-dashoffset .3s linear;
+}
+/*# sourceMappingURL=main.css.map */
